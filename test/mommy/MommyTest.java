@@ -20,4 +20,23 @@ public class MommyTest {
         Mommy singleNonVowel = new Mommy("x");
         assertEquals("x", singleNonVowel.mommify());
     }
+
+    @Test
+    public void shouldMommifySingleVowel(){
+        Mommy singleNonVowel = new Mommy("a");
+        assertEquals("mommy", singleNonVowel.mommify());
+    }
+
+    @Test
+    public void shouldMommifyOnlyVowelsInTwoCharactersString(){
+        Mommy vowelConsonant = new Mommy("ax");
+        assertEquals("mommyx", vowelConsonant.mommify());
+    }
+
+    @Test
+    public void shouldNotMommifyTwoConstantsInTwoCharactersString(){
+        Mommy vowelConsonant = new Mommy("xx");
+        assertEquals("xx", vowelConsonant.mommify());
+    }
+
 }
