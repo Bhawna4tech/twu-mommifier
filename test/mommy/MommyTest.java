@@ -53,4 +53,10 @@ public class MommyTest {
         Mommy moreThan30PercentVowel = new Mommy("aax");
         assertEquals("mommyx",moreThan30PercentVowel.mommify());
     }
+
+    @Test
+    public void shouldNotMommifyStringHavingLessThan30PercentOfVowels(){
+        Mommy moreThan30PercentVowel = new Mommy("axxxxxxxxxxa");
+        assertEquals("axxxxxxxxxxa",moreThan30PercentVowel.mommify());
+    }
 }
