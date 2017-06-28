@@ -1,9 +1,6 @@
 package mommy;
 
-/**
- * Created by bhawnakumari on 6/28/17.
- */
-public class Mommy {
+class Mommy {
     private String inputString;
 
     Mommy(String inputString) {
@@ -11,7 +8,7 @@ public class Mommy {
     }
 
     String mommify() {
-        String mommifiedString = new String("");
+        String mommifiedString = "";
         for (int i = 0; i < this.inputString.length(); i++) {
             mommifiedString = mommifiedString.concat(mommifySingleCharacter(this.inputString.charAt(i)));
         }
@@ -19,10 +16,15 @@ public class Mommy {
     }
 
     private String mommifySingleCharacter(char singleCharacter) {
-        if(singleCharacter == 'a' || singleCharacter == 'e' || singleCharacter == 'i'
-                || singleCharacter == 'o' || singleCharacter == 'u'){
+        if(isCharacterAVowel(singleCharacter))
+        {
             return "mommy";
         }
         return singleCharacter+"";
+    }
+
+    private boolean isCharacterAVowel(char singleCharacter) {
+        return singleCharacter == 'a' || singleCharacter == 'e' || singleCharacter == 'i'
+                || singleCharacter == 'o' || singleCharacter == 'u';
     }
 }
