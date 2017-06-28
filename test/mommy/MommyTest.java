@@ -43,8 +43,14 @@ public class MommyTest {
     }
 
     @Test
-    public void shouldMommifyStringHavingMoreThan30PercentOfVowels(){
+    public void shouldMommifyStringHavingMoreThan30PercentOfVowelsWithoutContinuousSet(){
         Mommy moreThan30PercentVowel = new Mommy("axa");
         assertEquals("mommyxmommy",moreThan30PercentVowel.mommify());
+    }
+
+    @Test
+    public void shouldMommifyStringHavingMoreThan30PercentOfVowelsWithContinuousSet(){
+        Mommy moreThan30PercentVowel = new Mommy("aax");
+        assertEquals("mommyx",moreThan30PercentVowel.mommify());
     }
 }
