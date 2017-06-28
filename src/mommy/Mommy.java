@@ -34,7 +34,7 @@ class Mommy {
                     numberOfVowels++;
                 }
             }
-            return ((numberOfVowels / inputString.length()) * 100) > 30.0;
+            return ((numberOfVowels / inputString.length()) * 100) > 30.00;
         } else return true;
     }
 
