@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by bhawnakumari on 6/28/17.
- */
 public class MommyTest {
 
     @Test
@@ -38,5 +35,12 @@ public class MommyTest {
         Mommy vowelConsonant = new Mommy("xx");
         assertEquals("xx", vowelConsonant.mommify());
     }
+
+    @Test
+    public void shouldMommifySetOfContinous2VowelsIntoSingleMommy(){
+        Mommy setOf2Vowels = new Mommy("aa");
+        assertEquals("mommy",setOf2Vowels.mommify());
+    }
+
 
 }

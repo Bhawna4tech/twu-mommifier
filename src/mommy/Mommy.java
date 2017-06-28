@@ -9,8 +9,14 @@ class Mommy {
 
     String mommify() {
         String mommifiedString = "";
-        for (int i = 0; i < this.inputString.length(); i++) {
-            mommifiedString = mommifiedString.concat(mommifySingleCharacter(this.inputString.charAt(i)));
+        int noOfVowels = 0;
+        for (int i = 0; i < inputString.length(); i++) {
+            if (isCharacterAVowel(inputString.charAt(i))){
+                noOfVowels++;
+            }
+            if (noOfVowels<2){
+            mommifiedString = mommifiedString.concat(mommifySingleCharacter(inputString.charAt(i)));
+            }
         }
         return mommifiedString;
     }
